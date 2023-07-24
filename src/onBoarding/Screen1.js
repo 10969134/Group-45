@@ -12,23 +12,19 @@ const Screen1 = ({ navigation }) => {
   const curveHeight = height * 0.2;
 
   return (
-    <View style={[styles.container]}>
+    <View style={[styles.container, {flexDirection: 'column'}]}>
       <StatusBar style="light" />
-      <View style={tw`p-4 android:pt-2 bg-red-300 flex-row`}>
-    <Text style={tw`text-md tracking-wide`}>Hello World</Text>
-  </View>
-      <View style={[]}>
+      <View style={[{position: "relative"}]}>
         <Image source={oval} style={[styles.curve, { height: curveHeight }]} />
         <Image
-          source={slide1}
-          className=""/>
+          source={slide1}/>
       </View>
-      <View style={[]}>
-        <View style={[]}>
-          <Text style={[]}>
+      <View>
+        <View>
+          <Text style={[styles.box, ]}>
             Over 10,000 past
           </Text>
-          <Text style={[]}>
+          <Text>
             Questions in One Place
           </Text>
         </View>
@@ -60,12 +56,10 @@ export default Screen1;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    
   },
   curve: {
     width: "100%",
     resizeMode: "stretch",
-  },
-  flexContainer: {
-    flex: 1,
   },
 });

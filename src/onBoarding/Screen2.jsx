@@ -15,7 +15,7 @@ const slide2 = require("../assets/on_boarding_2.png");
 
 const Screen2 = ({ navigation }) => {
   const { height } = Dimensions.get("window");
-  const curveHeight = height * 0.5; // 
+  const curveHeight = height * 0.2; // 
 
   return (
     <View style={styless.container}>

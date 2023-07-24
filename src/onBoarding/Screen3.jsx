@@ -7,7 +7,7 @@ const slide3 = require("../assets/on_boarding_3.png");
 
 const Screen3 = ({ navigation }) => {
   const { height } = Dimensions.get("window");
-  const curveHeight = height * 0.5; // Adjust the value (0.2) as needed
+  const curveHeight = height * 0.2; // Adjust the value (0.2) as needed
 
   return (
     <View style={styles.container}>

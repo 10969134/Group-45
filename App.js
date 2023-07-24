@@ -29,6 +29,10 @@ const App = () => {
             name="OnBoarding3"
             component={Screen3}
           />
+          {/* <Stack.Screen
+            name="SignUp"
+            component={SignUp}
+          /> */}
           
         </Stack.Navigator>
     </NavigationContainer>
