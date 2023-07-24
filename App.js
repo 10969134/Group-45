@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 //import SignIn from "./src/SignIn";
 //import SignUp from "./src/SignUp";
 //import Setup from "./src/SetUp";
-import Screen1 from "./src/onBoarding/Screen1";
+import Onboarding from "./src/components/screen";
 import Screen2 from "./src/onBoarding/Screen2";
 import Screen3 from "./src/onBoarding/Screen3";
 
@@ -15,13 +15,10 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName="OnBoarding1">
-        
-          <Stack.Screen
-            name="OnBoarding1"
-            component={Screen1}
-          />
-          <Stack.Screen
+        initialRouteName="OnBoarding1"
+      >
+        <Stack.Screen name="OnBoarding1" component={Onboarding} />
+        <Stack.Screen
             name="OnBoarding2"
             component={Screen2}
           />
@@ -29,12 +26,11 @@ const App = () => {
             name="OnBoarding3"
             component={Screen3}
           />
-          {/* <Stack.Screen
+         {/* <Stack.Screen
             name="SignUp"
             component={SignUp}
           /> */}
-          
-        </Stack.Navigator>
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
