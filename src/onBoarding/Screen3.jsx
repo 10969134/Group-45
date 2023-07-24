@@ -1,17 +1,11 @@
-import {
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  Dimensions,
-} from "react-native";
+import { Image,  StyleSheet,  Text,  View,  Dimensions,} from "react-native";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { TouchableOpacity } from "react-native";
-const oval = require("../../assets/oval_header.png");
-const slide3 = require("../../assets/on_boarding_3.png");
+const oval = require("../assets/oval_header.png");
+const slide3 = require("../assets/on_boarding_3.png");
 
-const Screen3 = ({ navigation }: any) => {
+const Screen3 = ({ navigation }) => {
   const { height } = Dimensions.get("window");
   const curveHeight = height * 0.5; // Adjust the value (0.2) as needed
 

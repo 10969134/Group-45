@@ -1,26 +1,14 @@
-import {
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  Dimensions,
-  TextInput,
-  Platform,
-} from "react-native";
-import React, { ReactNode } from "react";
+import React from "react";
+import {Image, StyleSheet, Text, View} from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { Octicons } from "@expo/vector-icons";
-import { KeyboardAvoidingView } from "react-native";
-import RNPickerSelect from "react-native-picker-select";
 import { AntDesign } from "@expo/vector-icons";
 import { ScrollView } from "react-native";
-const math = require("../assets/bece_math.png");
+const math = require("./assets/bece_math.png");
 
-const img = require("../assets/social.png");
+const img = require("./assets/social.png");
 
-const SignUp = ({ navigation }: any) => {
+const SignUp = () => {
   const placeholder = {
     label: "Level of Education",
     value: null,
@@ -46,7 +34,7 @@ const SignUp = ({ navigation }: any) => {
     return <AntDesign name="down" size={15} color="black" />;
   };
 
-  const data: any = ["Primary", "Secondary", "Tertiary"];
+  const data = ["Primary", "Secondary", "Tertiary"];
   return (
     <View style={styles.container}>
       <StatusBar style="light" />

@@ -1,10 +1,4 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  TextInput,
-} from "react-native";
+import {View, Text, StyleSheet, TouchableOpacity, TextInput} from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -14,7 +8,7 @@ import { StatusBar } from "expo-status-bar";
 
 //pick country code from text view
 
-const SignIn = ({ navigation }: any) => {
+const SignIn = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -27,7 +21,7 @@ const SignIn = ({ navigation }: any) => {
     navigation.navigate("SignUp");
   };
   const [fontsLoaded] = useFonts({
-    Manrope: require("../../../assets/fonts/Manrope/static/Manrope-Bold.ttf"),
+    Manrope: require("./fonts/mulish.ttf"),
   });
   if (!fontsLoaded) {
     return null;

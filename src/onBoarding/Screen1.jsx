@@ -1,38 +1,34 @@
-import {
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  Dimensions,
-  Button,
-} from "react-native";
+import {  Image, StyleSheet, Text, View, Dimensions, Button,} from "react-native";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { TouchableOpacity } from "react-native";
-const oval = require("../../assets/oval_header.png");
+const oval = require("../assets/oval_header.png");
 import { FontAwesome } from "@expo/vector-icons";
-const slide1 = require("../../assets/on_boarding_2.png");
+const slide1 = require("../assets/on_boarding_1.png");
+import { tw } from "tailwind-react-native-classnames";
 
-const Screen1 = ({ navigation }: any) => {
+const Screen1 = ({ navigation }) => {
   const { height } = Dimensions.get("window");
-  const curveHeight = height * 0.5; // Adjust the value (0.2) as needed
+  const curveHeight = height * 0.2;
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container]}>
       <StatusBar style="light" />
-      <View className="flex-1 relative">
+      <View style={tw`p-4 android:pt-2 bg-red-300 flex-row`}>
+    <Text style={tw`text-md tracking-wide`}>Hello World</Text>
+  </View>
+      <View style={[]}>
         <Image source={oval} style={[styles.curve, { height: curveHeight }]} />
         <Image
           source={slide1}
-          className="h-56 w-72 absolute flex left-16 bottom-16"
-        />
+          className=""/>
       </View>
-      <View className="flex-1 flex ">
-        <View className="mt-10">
-          <Text className="text-center text-3xl text-gray-800 font-semibold">
+      <View style={[]}>
+        <View style={[]}>
+          <Text style={[]}>
             Over 10,000 past
           </Text>
-          <Text className="text-center text-3xl text-gray-800 font-semibold">
+          <Text style={[]}>
             Questions in One Place
           </Text>
         </View>

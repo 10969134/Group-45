@@ -1,13 +1,5 @@
-import {
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  Dimensions,
-  TextInput,
-  Platform,
-} from "react-native";
-import React, { ReactNode } from "react";
+import {Image, useState, StyleSheet, Text, View,Dimensions,  TextInput, Platform } from "react-native";
+import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
@@ -15,16 +7,16 @@ import { Octicons } from "@expo/vector-icons";
 import { KeyboardAvoidingView } from "react-native";
 import RNPickerSelect from "react-native-picker-select";
 import { AntDesign } from "@expo/vector-icons";
-const oval = require("../../assets/oval_header.png");
-const img = require("../../assets/signup_banner.png");
+const oval = require("./assets/oval_header.png");
+const img = require("./assets/signup_banner.png");
 
-const SignUp = ({ navigation }: any) => {
+const SignUp = ({ navigation }) => {
   const placeholder = {
     label: "Level of Education",
     value: null,
     color: "#fff",
   };
-  const [level, setLevel] = React.useState("");
+  const [level, setLevel] = useState("");
   const items = [
     {
       label: "Primary",
@@ -107,7 +99,6 @@ const SignUp = ({ navigation }: any) => {
                 value={level}
                 useNativeAndroidPickerStyle={false}
                 textInputProps={{ underlineColorAndroid: "transparent" }}
-                Icon={CustomIcon as unknown as React.ReactNode}
               />
             </View>
           </View>

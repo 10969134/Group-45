@@ -9,13 +9,13 @@ import {
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { TouchableOpacity } from "react-native";
-const oval = require("../../assets/oval_header.png");
+const oval = require("../assets/oval_header.png");
 import { FontAwesome } from "@expo/vector-icons";
-const slide2 = require("../../assets/on_boarding_1.png");
+const slide2 = require("../assets/on_boarding_2.png");
 
-const Screen2 = ({ navigation }: any) => {
+const Screen2 = ({ navigation }) => {
   const { height } = Dimensions.get("window");
-  const curveHeight = height * 0.5; // Adjust the value (0.2) as needed
+  const curveHeight = height * 0.5; // 
 
   return (
     <View style={styless.container}>
